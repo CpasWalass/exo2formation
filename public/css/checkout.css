@@ -1,0 +1,157 @@
+/* ============================================================
+   Order.uk - page commande / checkout (checkout.html)
+   Layout 3 colonnes, navigation menu, panneau panier.
+   ============================================================ */
+
+/* ============ Layout menu 3 colonnes ============ */
+.menu-layout.menu-3 {
+  grid-template-columns: 210px 1fr 360px;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-nav a {
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.menu-nav a:hover,
+.menu-nav a.active {
+  background: var(--orange);
+  color: #fff;
+}
+
+.menu-nav .off {
+  color: var(--orange);
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ============ Panneau panier (sidebar) ============ */
+.basket {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.basket h3 {
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.basket-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.basket-item img {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.basket-item .nm {
+  flex: 1;
+  font-size: 13px;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.basket-item .nm small {
+  display: block;
+  color: #888;
+  font-weight: 400;
+}
+
+.basket-item .pr {
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.basket-lines {
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+.basket-lines .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: #444;
+}
+
+.basket-lines .row.total {
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 17px;
+  border-top: 1px solid #eee;
+  margin-top: 6px;
+  padding-top: 12px;
+}
+
+.basket-lines .row.total span {
+  color: var(--orange);
+}
+
+.basket .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ============ Grille checkout ============ */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* ============================================================
+   Responsive (checkout)
+   ============================================================ */
+
+@media (max-width: 1200px) {
+  .menu-layout.menu-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .basket {
+    position: static;
+  }
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Écrans mobiles ================= */
+@media (max-width: 768px) {
+  .basket {
+    border-radius: 14px 14px 0 0;
+  }
+  .checkout-grid {
+    gap: 20px;
+  }
+}

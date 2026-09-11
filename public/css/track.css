@@ -1,0 +1,136 @@
+/* ============================================================
+   Order.uk - suivi de commande / code postal (track.html)
+   Cartes centrées, étapes de confirmation, messages.
+   ============================================================ */
+
+.center-card {
+  max-width: 520px;
+  margin: 40px auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 34px;
+  text-align: center;
+  box-shadow: 0 14px 40px rgba(3, 8, 31, 0.08);
+}
+
+.center-card .pc-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.center-card h1 {
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.center-card p {
+  color: #5a6474;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.center-card input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  outline: none;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+.center-card input:focus {
+  border-color: var(--orange);
+}
+
+.center-card .or {
+  color: #999;
+  font-size: 13px;
+  margin: 14px 0;
+  display: block;
+}
+
+.center-card .link {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.error-box {
+  background: #ffe9e9;
+  border: 1px solid #ffb4b4;
+  color: #a33;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.success-box {
+  background: #e8f7ee;
+  border: 1px solid #9adfb4;
+  color: #0a6a35;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Étapes de suivi */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 20px;
+  gap: 10px;
+}
+
+.step-pill {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  position: relative;
+}
+
+.step-pill.done {
+  border-color: var(--green);
+  color: var(--green);
+  font-weight: 700;
+}
+
+.step-pill.now {
+  border-color: var(--orange);
+  background: #fff8f0;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Responsive (suivi)
+   ============================================================ */
+
+/* ================= Écrans mobiles ================= */
+@media (max-width: 768px) {
+  .steps {
+    flex-wrap: wrap;
+  }
+  .step-pill {
+    min-width: 45%;
+  }
+}
